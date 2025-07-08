@@ -155,4 +155,57 @@
 # #     print(type(i))
 # print(list(zip(li,li2)))
 
-# map()
+# map()  对每一个可迭代对象进行映射，分别去执行
+# map(func,iter1):   func --自己定义的函数  iter1 要放进去的可迭代对象
+# 简单来说就是对象的每一个元素都去执行这个函数
+# li = [1,2,3]
+# # def func1(x):
+# #     return x*5
+# func1 = lambda x: x*5
+# mp = map(func1, li)  #函数名不需要小括号
+# print(mp)  #<map object at 0x0000023DBBEE14B0>
+# # for x in mp:
+# #     print(x)
+# print(list(mp))
+
+# reduce()  ; 先把对象中的两个元素取出，计算出一个值然后保存着，接下来把这个计算值跟第三个元素进行计算
+# from functools import reduce  #导包
+# # 格式：
+# print(reduce(lambda x, y: x + y, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
+
+# reduce(function,sequence)
+
+# li2 = [1,2,3,4]
+# def add(x,y):  #两个参数
+#     return x+2*y   #19
+# res = reduce(add, li2)
+# print(res)
+
+
+# 4、拆包
+# 含义：对于函数有多个返回值，去掉元组，列表，或者字典 直接取里面的数据的过程
+# tua = (1,2,3,4)
+# print(tua)
+# print(tua[0])
+
+# 方法一
+# tua = (1,2,3,4)
+# a,b,c,d = tua
+# print(a,b,c,d)
+
+# tua = (1,2,3,4)
+# a,b = tua  #报错 要求元组内的个数与接受的变量个数相同
+# print(a,b)
+# 一般在获取元组值的时候使用
+
+# 方法二
+# tua = (1,2,3,4)
+# a,*b = tua
+# print(a,b)  #1 [2, 3, 4]
+# c,*d = b
+# print(*d)  #3 4   套娃一样的  单独取，剩下的交给*
+# 一般在函数调用时使用
+# def func1(a,b,*args):
+#     print(a,b)  #1 2
+#     print(args,type(args))  #(3, 4) <class 'tuple'>
+# func1(1,2,3,4)
