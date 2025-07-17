@@ -92,19 +92,45 @@
 # del p
 # # 正常运行时，不会调用__del__(),对象执行结束之后，系统会自动调用__del__，主要表示语句块结束，回收内存
 
+# ————————————————python基础学习完毕——————————————
 
 
 
+# 人工智能基础    以下都在jupyter notebook 运行得出
+# pip install matplotlib
+
+# import matplotlib
+# x = [1,2,3,4,5]
+# y = [6,7,8,9,10]
+# print(x,y)
+#
+# from matplotlib import pyplot as plt
+# fig1 = plt.figure(figsize=(5,5))
+# plt.plot(x,y)#直线图
+# plt.show()   #显示
+
+# from matplotlib import pyplot as plt
+# fig1 = plt.figure(figsize=(5,5))
+# plt.scatter(x,y)   #散点构图
+# plt.title('y vs x')  #标题
+# plt.show()
+
+# numpy 的引入，数组的生产
+# import numpy as np
+# a = np.eye(5)  #5行5列 的单位矩阵E
+# print(type(a))
+# print(a)
 
 
+# b = np.ones([5,5])   #5行5列 都是1的矩阵
+# print(type(b))
+# print(b)
+# print(b.shape)
 
-
-
-
-
-
-
-
+# c = a+b    #矩阵相加
+# print(type(c))
+# print(c.shape)
+# print(c)
 
 
 
