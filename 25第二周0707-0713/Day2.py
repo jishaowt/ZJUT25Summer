@@ -96,7 +96,8 @@
 
 
 
-# 人工智能基础    以下都在jupyter notebook 运行得出
+# 人工智能基础    以下推荐在jupyter notebook 运行
+
 # pip install matplotlib
 
 # import matplotlib
