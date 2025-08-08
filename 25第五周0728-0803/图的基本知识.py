@@ -25,6 +25,5 @@ print(nx.betweenness_centrality(G))
 print(nx.closeness_centrality(G))
 #pagerank
 print(nx.pagerank(G))
-
 #HITS
 print(nx.hits(G))
